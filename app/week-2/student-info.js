@@ -7,4 +7,4 @@ export default function Studentinfo() {
         <Link href="https://github.com/AselC"className="hover:underline hover:text-cyan-300">Visit my GitHub</Link>
         </div>
     );
-    }
+}

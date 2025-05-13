@@ -6,7 +6,7 @@ export default function Page() {
     <main>
       <h1>Shopping List</h1>
       <Studentinfo />
-      <Link href="/">Back to Home</Link>
+      <Link href="/" className="mt-8 block">Back to Home</Link>
     </main>
   );
 }
