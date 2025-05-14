@@ -4,7 +4,7 @@ export default function Studentinfo() {
     return (
         <div>
         <h1>Gerazel Jane Castro</h1>
-        <Link href="https://github.com/AselC"className="hover:underline hover:text-cyan-300">Visit my GitHub</Link>
+        <Link href="https://github.com/AselC"className="hover:underline hover:text-cyan-300"></Link>
         </div>
     );
 }
