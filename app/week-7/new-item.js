@@ -11,7 +11,7 @@ export default function NewItem({ onAddItem }) {
     event.preventDefault();
 
     const newItem = {
-      id: crypto.randomUUID(),
+      id: Date.now(),
       name,
       quantity,
       category,
