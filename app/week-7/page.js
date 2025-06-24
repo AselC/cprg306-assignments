@@ -35,7 +35,7 @@ export default function Page() {
           Shopping List
         </h1>
 
-        {/* Controls Row */}
+        
         <div className="flex flex-wrap justify-between items-center mb-6 gap-4">
           <select
             value={sortOption}
@@ -55,14 +55,14 @@ export default function Page() {
           </button>
         </div>
 
-        {/* Form */}
+        
         {showForm && (
           <div className="mb-6">
             <NewItem onAddItem={handleAddItem} />
           </div>
         )}
 
-        {/* Items List */}
+        
         <ItemList
           items={items}
           sortBy={sortOption}
@@ -70,7 +70,7 @@ export default function Page() {
         />
       </div>
 
-      {/* Modal */}
+      
       {isMessageVisible && (
         <div className="fixed inset-0 flex items-center justify-center bg-black/30 z-50">
           <div className="bg-white p-6 rounded shadow-lg w-80 text-center">
