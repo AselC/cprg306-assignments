@@ -97,11 +97,11 @@ export default function MealIdeas({ ingredient }) {
           <h3 className="text-xl font-semibold mb-2 text-blue-600">
             Ingredients for {selectedMeal}
           </h3>
-          <ul className="grid grid-cols-2 md:grid-cols-3 gap-2">
+          <ul className="list-disc list-inside space-y-1">
             {mealDetails.map((detail, index) => (
               <li
                 key={index}
-                className="bg-green-50 border border-green-200 p-2 rounded text-sm text-gray-700"
+                className="bg-orange-50 border border-red-200 p-2 rounded text-sm text-gray-700"
               >
                 {detail}
               </li>
