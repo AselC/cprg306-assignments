@@ -43,11 +43,10 @@ export default function Page() {
   }
 
   return (
-    <main className="min-h-screen bg-gray-100 py-16 px-10">
-      <div className="container mx-auto max-w-[1500px] bg-white shadow-lg rounded-lg p-12 flex flex-col gap-6 min-h-[500px]">
+    <main className="min-h-screen bg-gray-100 py-16 px-4">
+      <div className="container mx-auto max-w-6xl bg-white shadow-lg rounded-lg p-8 flex flex-col gap-6 min-h-[500px]">
 
-        {/* Controls Row */}
-        <div className="flex justify-between items-center mb-3">
+        <div className="flex justify-between items-center mb-3 flex-wrap gap-4">
           <div className="flex gap-4">
             <select
               value={sortOption}
@@ -61,7 +60,7 @@ export default function Page() {
 
             <button
               onClick={() => setShowForm((prev) => !prev)}
-              className="ml-100 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md shadow-md transition"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md shadow-md transition"
             >
               {showForm ? "Hide Form" : "Add New Item"}
             </button>
@@ -80,24 +79,25 @@ export default function Page() {
 
           {/* Left Column */}
           <div className="flex-1 flex flex-col items-center">
-            {/* Centered Header */}
-            <h1 className="text-4xl font-bold text-blue-700 mb-4 text-center w-full">
-              Shopping List
-            </h1>
+            <div className="flex flex-col items-center w-full">
+              <h1 className="text-4xl font-bold text-blue-700 mb-4 text-center">
+                Shopping List
+              </h1>
 
-            {showForm && (
-              <div className="mb-6">
-                <NewItem onAddItem={handleAddItem} />
+              {showForm && (
+                <div className="mb-6 w-full">
+                  <NewItem onAddItem={handleAddItem} />
+                </div>
+              )}
+
+              <div className="flex-1 overflow-y-auto max-h-[700px] border-t pt-4 w-full">
+                <ItemList
+                  items={items}
+                  sortBy={sortOption}
+                  onRemoveItem={handleRemoveItem}
+                  onItemSelect={handleItemSelect}
+                />
               </div>
-            )}
-
-            <div className="flex-1 overflow-y-auto max-h-[700px] border-t pt-4 w-full">
-              <ItemList
-                items={items}
-                sortBy={sortOption}
-                onRemoveItem={handleRemoveItem}
-                onItemSelect={handleItemSelect}
-              />
             </div>
           </div>
 
